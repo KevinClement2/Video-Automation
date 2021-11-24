@@ -1,0 +1,36 @@
+{
+    "template": {
+        "src": "file:///D:/Nexrender/AudioVisualizer.aep",
+        "composition": "MAIN",
+        "frameIncrement": 10,
+        "frameStart": 0,
+        "frameEnd": 200
+    },
+    "assets":[
+        {
+            "src":"file:///D:/Nexrender/Assets/background.jpeg",
+            "type": "image",
+            "layerName": "background.jpg"
+        },
+        {
+            "src":"file:///D:/Nexrender/Assets/audio.mp3",
+            "type": "audio",
+            "layerName": "Audio.mp3"
+        }
+    ],
+    "actions":{
+        "postrender": [
+            {
+                "module": "@nexrender/action-encode",
+                "preset": "mp4",
+                "output": "encoded.mp4",
+                "parmas": {"-vcodec": "libx264", "-r": 25}
+            },
+            {
+                "module": "@Nexrender/action-copy",
+                "input": "encoded.mp4",
+                "output": "D:/Nexrender/result.mp4"
+            }
+        ]
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "nexrender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nexrender/action-copy": "^1.24.2",
+    "@nexrender/action-encode": "^1.28.2",
+    "@nexrender/core": "^1.32.3"
+  }
+}
